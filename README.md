@@ -4,52 +4,59 @@
 
 # Vice Sunset Cover Maker
 
-An offline web app that turns your photos and a caption into GTA 6-style
-cover art: a multi-panel poster with a Vice City neon-sunset grade, bold
-caption lettering, and one-click PNG export in the common post sizes.
+A small, fully offline web app for turning your own photos and a caption into
+GTA 6-style cover art. It builds a multi-panel poster with a Vice City
+neon-sunset look — warm skies, glowing lettering, palm silhouettes — and
+exports it as a PNG ready to post.
 
-## How it works
+Built for the make.fun bounty **"Make GTA 6 Cover Art"**:
+https://make.fun/bounty/gta6-cover-art-01
 
-1. Add up to three photos from your machine (two free sample photos are
-   pre-loaded so you can try it straight away).
-2. Pick a layout: **Poster grid** (one hero panel + three stacked panels),
-   **Diagonal slices**, or **Film strip**.
-3. Click any panel to select it, then crop it: drag inside the panel to move
-   the photo, or use the zoom and pan sliders. One photo can fill every panel,
-   or each panel can hold a different photo.
-4. Write the title and subtitle, pick a title colour and size.
-5. Tune the look: sunset warmth, neon glow, palm silhouettes, film grain.
-6. Choose a post size — 1080 × 1080, 1080 × 1350, or 1920 × 1080 — and hit
-   **Export PNG**.
+## What it does
 
-## Run it
+- **Three panel layouts** — a poster grid with one hero panel plus three
+  stacked panels, diagonal slices, or a classic film strip.
+- **Your photos, your crop** — drop in up to three pictures, or start with
+  the two included sample photos. Click a panel to select it, drag to move
+  the photo inside it, and fine-tune with the zoom and pan sliders. A single
+  photo can span every panel, or each panel can show a different shot.
+- **Big cover type** — a bold title and subtitle with your choice of colour
+  and size, drawn in the vendored Anton display face.
+- **Sunset styling** — dial in warmth, neon glow, palm silhouettes and film
+  grain until the poster feels like a Vice City evening.
+- **One-click export** — PNG in 1080 × 1080, 1080 × 1350 or 1920 × 1080.
+  The export is a pixel-exact render of what the preview shows, so what you
+  see on screen is exactly what gets posted.
+
+## How to run it
 
 ```sh
 node serve.ts
-# open http://localhost:8080
+# then open http://localhost:8080
 ```
 
-No build step, no network requests, no uploads: every file the app loads is
-under `app/`, and your photos never leave your machine.
+That is all there is to it: no build step, no install, no network calls.
+Every file the app needs lives under `app/`, and the photos you add never
+leave your machine.
 
-## Original art
-
-Everything the app draws is its own: the sunset sky, sun disc and palm
-silhouettes are canvas primitives, and the display typeface is
-[Anton](https://github.com/google/fonts/tree/main/ofl/anton) (SIL Open Font
-License, see `app/fonts/OFL.txt`), vendored under `app/fonts/`. No Rockstar
-Games logo, wordmark, artwork, character or font is used. The two sample
-photos under `app/samples/` were made with an image model for make.fun and
-are free to use.
-
-## Hand in
+## Producing the entry output
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`main.ts` copies `app/` and `screenshots/` to `/output` and writes
-`/output/dossier.json` with the vendored make.fun library.
+`main.ts` copies `app/` and `screenshots/` into the output directory and
+writes `dossier.json` using the vendored make.fun library.
+
+## Original artwork
+
+Nothing in the app is borrowed from the game: the sunset sky, sun disc and
+palm trees are drawn as canvas primitives, and the display font is
+[Anton](https://github.com/google/fonts/tree/main/ofl/anton) under the SIL
+Open Font License (see `app/fonts/OFL.txt`), vendored under `app/fonts/`.
+No Rockstar Games logo, wordmark, artwork, character or font is used. The
+two sample photos in `app/samples/` were generated with an image model for
+this make.fun entry and are free to use.
 
 ## License
 
