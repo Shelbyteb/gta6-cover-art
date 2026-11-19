@@ -1,0 +1,26 @@
+[
+ {
+  "h": 720,
+  "name": "1-cover.jpg",
+  "query": "?shot=cover&layout=poster&size=wide&title=VICE%20CITY%20NIGHTS&sub=OCEAN%20DRIVE%20AFTER%20DARK&p1=pier&p2=boulevard&panels=0,1,1,1",
+  "w": 1280
+ },
+ {
+  "h": 800,
+  "name": "2-editor.jpg",
+  "query": "?shot=editor&layout=poster&size=square&title=BOULEVARD%20QUEEN&sub=OCEAN%20DRIVE%20AFTER%20DARK&p1=boulevard&p2=pier&panels=0,0,1,1",
+  "w": 1280
+ },
+ {
+  "h": 1280,
+  "name": "3-cover-portrait.jpg",
+  "query": "?shot=cover&layout=diagonal&size=portrait&title=NEON%20HEIST&sub=MIDNIGHT%20ON%20THE%20PIER&p1=pier&p2=boulevard&panels=0,1,0",
+  "w": 1024
+ },
+ {
+  "h": 1024,
+  "name": "4-cover-strip.jpg",
+  "query": "?shot=cover&layout=strip&size=square&title=SUNSET%20DRIVE&sub=VICE%20CITY%20AFTER%20DARK&p1=boulevard&p2=pier&panels=0,0,1",
+  "w": 1024
+ }
+]
